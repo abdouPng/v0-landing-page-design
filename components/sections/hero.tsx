@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { CTAButton } from "@/components/shared/cta-button"
+import { GradientMesh } from "@/components/shared/gradient-mesh"
 import { ArrowDown } from "lucide-react"
 
 interface HeroProps {
@@ -11,8 +12,11 @@ interface HeroProps {
 export function Hero({ onCTAClick }: HeroProps) {
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
+      {/* Animated Gradient Mesh Background */}
+      <GradientMesh />
+
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-1">
         <Image
           src="/images/hero-coach.jpg"
           alt="Alex Rivera - Hybrid Performance Coach"
