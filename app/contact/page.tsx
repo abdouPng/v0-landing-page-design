@@ -8,10 +8,14 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { GlassCard } from "@/components/shared/glass-card"
+import { Footer } from "@/components/layout/footer"
+import { FinalCTA } from "@/components/sections/final-cta"
+import { CheckoutModal } from "@/components/shared/checkout-modal"
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -178,14 +182,14 @@ export default function ContactPage() {
         </div>
       </main>
 
+      {/* CTA Section */}
+      <FinalCTA onCTAClick={() => setIsModalOpen(true)} />
+
       {/* Footer */}
-      <footer className="w-full py-8 px-4 md:px-8 lg:px-16 border-t border-border">
-        <div className="max-w-7xl mx-auto text-center">
-          <span className="text-sm text-muted-foreground">
-            © 2026 Hybrid Performance. All rights reserved.
-          </span>
-        </div>
-      </footer>
+      <Footer />
+
+      {/* Checkout Modal */}
+      <CheckoutModal open={isModalOpen} onOpenChange={setIsModalOpen} />
     </div>
   )
 }
