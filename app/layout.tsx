@@ -45,7 +45,7 @@ export default function RootLayout({
     <html lang="en" className="bg-background" data-scroll-behavior="smooth">
       <body className="font-sans antialiased min-h-screen">
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        <Analytics />
       </body>
     </html>
   )
