@@ -36,18 +36,33 @@ export function Hero({ onCTAClick }: HeroProps) {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Column - Typography */}
           <div className="flex flex-col justify-center">
+            {/* Intro Description Badge */}
+            <div className="animate-fade-up mb-5 flex items-center gap-3">
+              <div className="h-px w-8 bg-primary" />
+              <p className="text-sm font-medium tracking-widest uppercase text-primary">
+                Hybrid Performance &mdash; By Alex Rivera
+              </p>
+            </div>
+
+            {/* Intro Description */}
+            <p className="animate-fade-up stagger-1 text-sm md:text-base text-muted-foreground/80 max-w-md leading-relaxed mb-5 border-l-2 border-primary/40 pl-4">
+              Trusted by over 500 high-performing professionals worldwide. Our science-backed methodology
+              bridges the gap between elite athletic training and the demands of a demanding career &mdash;
+              so you never have to choose between peak performance and peak results.
+            </p>
+
             {/* Headline */}
-            <h1 className="animate-fade-up font-sans text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white text-balance mb-6">
+            <h1 className="animate-fade-up stagger-2 font-sans text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white text-balance mb-6">
               EVOLVE BEYOND LIMITS.
             </h1>
 
             {/* Subheadline */}
-            <p className="animate-fade-up stagger-1 text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed mb-8">
+            <p className="animate-fade-up stagger-3 text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed mb-8">
               Elite fitness programs tailored to your lifestyle. Engineered for performance, designed for results.
             </p>
 
             {/* CTA Button */}
-            <div className="animate-fade-up stagger-2 mb-8">
+            <div className="animate-fade-up stagger-4 mb-8">
               <button
                 onClick={onCTAClick}
                 className="relative inline-flex items-center justify-center h-14 px-8 text-base font-semibold text-primary-foreground bg-primary rounded-lg transition-all duration-300 hover:scale-105 cta-glow"
