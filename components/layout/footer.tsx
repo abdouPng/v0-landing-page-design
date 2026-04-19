@@ -12,7 +12,7 @@ export function Footer() {
           </span>
           <div className="flex items-center gap-4">
             <Link
-              href="/contact"
+              href="/contact#top"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Contact

@@ -30,6 +30,9 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Anchor for top of page */}
+      <div id="top" />
+      
       {/* Header */}
       <header className="w-full py-4 px-4 md:px-8 lg:px-16 border-b border-border">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
