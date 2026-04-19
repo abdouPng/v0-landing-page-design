@@ -12,11 +12,8 @@ interface HeroProps {
 export function Hero({ onCTAClick }: HeroProps) {
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
-      {/* Animated Gradient Mesh Background */}
-      <GradientMesh />
-
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-1">
+      <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero-coach.jpg"
           alt="Alex Rivera - Hybrid Performance Coach"
@@ -28,6 +25,9 @@ export function Hero({ onCTAClick }: HeroProps) {
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/60" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
       </div>
+
+      {/* Animated Gradient Mesh Background */}
+      <GradientMesh />
 
       {/* Content */}
       <div className="relative z-10 w-full px-4 md:px-8 lg:px-16 py-32">

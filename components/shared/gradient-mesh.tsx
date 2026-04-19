@@ -2,7 +2,7 @@
 
 export function GradientMesh() {
   return (
-    <div className="absolute inset-0 overflow-hidden z-0">
+    <div className="absolute inset-0 overflow-hidden z-1 pointer-events-none">
       {/* Animated SVG Mesh Background */}
       <svg
         className="absolute inset-0 w-full h-full"
